@@ -877,6 +877,11 @@
                         targetMoment.add(options.stepping, 'minutes');
                     }
                 }
+             
+                if (hasTime() && unset) {
+                    targetMoment.hours(0).minutes(0).seconds(0);
+                }
+
 
                 if (isValid(targetMoment)) {
                     date = targetMoment;
