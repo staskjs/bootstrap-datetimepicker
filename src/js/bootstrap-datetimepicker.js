@@ -877,10 +877,11 @@
                         targetMoment.add(options.stepping, 'minutes');
                     }
                 }
-             
-                if (hasTime() && unset) {
-                    targetMoment.hours(0).minutes(0).seconds(0);
-                }
+
+              console.log(targetMoment);
+                // if (hasTime() && unset) {
+                    // targetMoment.hours(0).minutes(0).seconds(0);
+                // }
 
 
                 if (isValid(targetMoment)) {
@@ -1049,6 +1050,9 @@
                     }
                     if ($(e.target).is('.new')) {
                         day.add(1, 'M');
+                    }
+                    if (unset && hasTime()) {
+                        day.hours(0).minutes(0).seconds(0);
                     }
                     setValue(day.date(parseInt($(e.target).text(), 10)));
                     if (!hasTime() && !options.keepOpen && !options.inline) {
