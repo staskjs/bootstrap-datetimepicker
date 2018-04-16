@@ -878,12 +878,6 @@
                     }
                 }
 
-              console.log(targetMoment);
-                // if (hasTime() && unset) {
-                    // targetMoment.hours(0).minutes(0).seconds(0);
-                // }
-
-
                 if (isValid(targetMoment)) {
                     date = targetMoment;
                     viewDate = date.clone();
